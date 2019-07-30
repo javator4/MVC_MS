@@ -5,11 +5,14 @@ public class GiantModel {
     private Health health;
     private Fatigue fatigue;
     private Nourishment nourishment;
+    private String name;
 
-    public GiantModel(Health health, Fatigue fatigue, Nourishment nourishment) {
+
+    public GiantModel(Health health, Fatigue fatigue, Nourishment nourishment, String name) {
         this.health = health;
         this.fatigue = fatigue;
         this.nourishment = nourishment;
+        this.name = name;
     }
 
     public Health getHealth() {
@@ -36,12 +39,21 @@ public class GiantModel {
         this.nourishment = nourishment;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "GiantModel{" +
                 "health=" + health +
                 ", fatigue=" + fatigue +
                 ", nourishment=" + nourishment +
+                ", name=" + name +
                 '}';
     }
 }
